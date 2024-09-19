@@ -12,7 +12,14 @@ public class Exercise1a {
    * @returns {int} The sum of the even numbers smaller than or equal to n
    */
   public static int addEven(int n) {
-    // TODO
-    return 0;
+    var i = 0;
+    var result = 0;
+
+    while (i <= n) {
+      result += i;
+      i += 2;
+    }
+
+    return result;
   }
 }

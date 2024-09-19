@@ -4,7 +4,8 @@ public class Exercise2a {
   // https://tech-docs.corndel.com/java/loop-control-flow.html
 
   /**
-   * Calculates the sum of numbers in an array that are either even or greater than 10, but skips
+   * Calculates the sum of numbers in an array that are either even or greater
+   * than 10, but skips
    * numbers that are both.
    *
    * @example // returns 37 sumSelective([1, 4, 12, 15, 20, 5, 8, 10])
@@ -12,7 +13,18 @@ public class Exercise2a {
    * @returns {int} The sum of numbers that meet the criteria.
    */
   public static int sumSelective(int[] numbers) {
-    // TODO
-    return 0;
+    var total = 0;
+
+    for (var num : numbers) {
+      if (num % 2 == 0 && num > 10) {
+        continue;
+      }
+
+      if (num % 2 == 0 || num > 10) {
+        total += num;
+      }
+    }
+
+    return total;
   }
 }
